@@ -18,15 +18,12 @@ app.get("/", function (req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
 
-
-
 // your first API endpoint... 
 app.get("/api/:date?", function (req, res) {
   let dateParam = req.params.date;
   let date;
   let unixDate;
   let utcDate;
-
 
   let isUnix = /^\d+$/.test(dateParam);
 
